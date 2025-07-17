@@ -1,0 +1,13 @@
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
+
+@Entity()
+export class Subscribe {
+    @PrimaryGeneratedColumn('uuid')
+    id: number;
+
+    @Column({ unique: true})
+    email: string;
+
+    @CreateDateColumn()
+    createdAt: Date;
+}
