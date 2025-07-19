@@ -3,7 +3,7 @@ import { DataSource, DataSourceOptions } from "typeorm";
 
 export default registerAs('typeorm', () => ({
     type: 'postgres',
-    database: process.env.DB_NAME,
+    database: process.env.DB_NAME || process.env.DATABASE_URL,
     host: process.env.DB_HOST,
     port: parseInt(process.env.DB_PORT ?? '', 10) || 5432,
     username: process.env.DB_USER,
