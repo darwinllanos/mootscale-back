@@ -5,7 +5,7 @@ export default registerAs('typeorm', () => {
     const isProduction = process.env.NODE_ENV === 'production';
 
     return isProduction ? {
-        type: 'postgress',
+        type: 'postgres',
         url: process.env.DATABASE_URL,
         ssl: {
             rejectUnauthorized: false,
